@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const now = new Date();
   const weekday = now.toLocaleDateString('en-US', { weekday: 'short' });
   const date = now.getDate();
-  const month = now.toLocaleDateString('en-US', { month: 'long' });
+  const month = now.toLocaleDateString('en-US', { month: 'short' });
   const year = now.getFullYear();
   const formattedDate = `${weekday}, ${date} ${month} ${year}`;
   if (dateBox) {
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const today = new Date();
     const isTodayMonth = today.getFullYear() === year && today.getMonth() === month;
-    const monthName = date.toLocaleString('default', { month: 'long' });
+    const monthName = date.toLocaleString('default', { month: 'short' });
     monthDisplay.textContent = `${monthName}, ${year}`;
     calendarGrid.innerHTML = '';
 
