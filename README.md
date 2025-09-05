@@ -1,5 +1,8 @@
 # Fuchsia-Widget
 A Strinova Fuchsia themed Todolist/Calender
+## Preview
+![Preview](assets/screenshots/preview.png)
+
 
 ## Features
 1. Todolist to mark down your activities
