@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Fuchsia Calendar</title>
+</head>
+<body>
+  <div id="window">
+    <div id="drag-region"></div>
+    <img src="assets/icons/Strinova.png" alt="Strinova Logo" id="logo" />
+    <div id="date-box"></div>
+    <div id="close-btn"></div>
+    <div id="todolist">
+        <div id="listbackground"></div>
+        <div id="list"></div>
+        <div id="addtask"></div>
+        <div id="newtask"></div>
+    </div>
+    <div id="clock"></div>
+    <div id="play-btn"></div>
+    <div id="skip"></div>
+    <div id="back"></div>
+    <img id="volume-icon" src="assets/icons/volume.png" alt="Volume Icon" />
+    <input type="range" id="volume-bar" min="0" max="100" value="60" />
+    <div id="now-playing"></div>
+    <div id="fuchsia-swimsuit"></div>
+    <div id="calender-box">
+      <div id="calendargrid"></div>
+      <div id="month-switch">
+        <div id="month-display"></div>
+        <div id="prev-btn"></div>
+        <div id="next-btn"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
