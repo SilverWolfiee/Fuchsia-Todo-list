@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Close button logic
+  // Close button 
   const closeBtn = document.getElementById('close-btn');
   if (closeBtn) {
     closeBtn.addEventListener('click', () => {
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Date box logic
+  // Date box 
   const dateBox = document.getElementById('date-box');
   const now = new Date();
   const weekday = now.toLocaleDateString('en-US', { weekday: 'short' });
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     dateBox.textContent = formattedDate;
   }
 
-  // Clock logic
+  // Clock 
   const clockBox = document.getElementById('clock');
   function updateClock() {
     const now = new Date();
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateClock();
   setInterval(updateClock, 1000);
 
-  // Todo list logic
+  // Todo list 
   const list = document.getElementById('list');
   const input = document.getElementById('newtask');
   const placeholderText = 'Add new task...';
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadTasks();
 
-  // Calendar logic
+  // Calendar 
   const calendarGrid = document.getElementById('calendargrid');
   const monthDisplay = document.getElementById('month-display');
   const prevBtn = document.getElementById('prev-btn');
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let isLofiPlaying = false;
   let hasStartedPlaying = false;
 
-  // Fetch mp3 paths from Electron backend
+
   async function initializeLofiTracks() {
     lofiTracks = await window.electronAPI.getLofiTracks();
     if (lofiTracks.length > 0) {
@@ -275,14 +275,14 @@ document.addEventListener('DOMContentLoaded', () => {
     updatePlayButtonIcon();
   }
 
-  // Scroll animation for song title
+ 
   function updateNowPlaying(index) {
     if (!nowPlaying || !lofiTracks[index]) return;
 
     const fullPath = lofiTracks[index];
     const fileName = '🎵 ' + fullPath.split(/[/\\]/).pop().replace(/\.mp3$/, '');
 
-    nowPlaying.innerHTML = ''; // Clear
+    nowPlaying.innerHTML = ''; 
     const span = document.createElement('span');
     span.textContent = fileName;
     nowPlaying.appendChild(span);
@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
           const distance = textWidth - containerWidth;
-          const speed = distance / 30; // adjust for scroll speed
+          const speed = distance / 30; 
           span.style.transition = `transform ${speed}s linear`;
           span.style.transform = `translateX(-${distance}px)`;
 
@@ -309,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1500);
           }, { once: true });
 
-        }, 1500); // wait before scroll starts
+        }, 1500); 
       } else {
         span.style.transition = 'none';
         span.style.transform = 'translateX(0)';

@@ -9,6 +9,7 @@ A Strinova Fuchsia themed Todolist/Calender
 2. Calendar View
 3. A build in MP3 Player with volume control
 
+
 ## Requirements
 [Node.js](https://nodejs.org/en/download/)
 
@@ -23,3 +24,8 @@ cd Fuchsia-Todo-list
 npm install
 ```
 Then run program using ```start.bat```
+## how to use
+To-do-list
+1. To add task, type the task you want to add, then press enter
+2. To remove task, Click on the task you have done doing.
+3. To add your own song, download an mp3 file then paste it to ```assets/lofi```'
