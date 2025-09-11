@@ -359,23 +359,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // Previous track
   if (backBtn) {
     backBtn.addEventListener('click', () => {
-      if (!hasStartedPlaying || lofiTracks.length === 0) return;
-      playTrack(currentTrackIndex - 1);
+      playTrack(currentTrackIndex-1);
     });
   }
 
   // Next track
   if (skipBtn) {
     skipBtn.addEventListener('click', () => {
-      if (!hasStartedPlaying || lofiTracks.length === 0) return;
-      playTrack(currentTrackIndex + 1);
+      playTrack(currentTrackIndex-1);
     });
   }
 
   // Auto-shuffle next track
   lofiAudio.addEventListener('ended', () => {
     if (isLofiPlaying && lofiTracks.length > 0) {
-      const nextIndex = Math.floor(Math.random() * lofiTracks.length);
+      let nextIndex;
+      do {
+        nextIndex = Math.floor(Math.random() * lofiTracks.length);
+      } while (nextIndex === currentTrackIndex && lofiTracks.length > 1);
+      
       playTrack(nextIndex);
     }
   });
