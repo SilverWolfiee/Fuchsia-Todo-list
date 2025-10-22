@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "text": "10/11 - ADA",
+    "completed": false
+  },
+  {
+    "text": "11/11 OOP Programming",
+    "completed": false
+  },
+  {
+    "text": "12/11 Database",
+    "completed": false
+  },
+  {
+    "text": "13/11 Physics + AI",
+    "completed": false
+  },
+  {
+    "text": "14/11 Computer Network",
+    "completed": false
+  }
+]

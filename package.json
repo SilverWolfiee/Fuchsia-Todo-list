@@ -1,15 +1,33 @@
 {
-  "name": "fufuwidget2.0",
+  "name": "fuchsiawidget",
   "version": "1.0.0",
+  "description": "Fuchsia Todo List desktop app",
   "main": "main.js",
+  "author": "SilverWolf",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "build": {
+    "appId": "com.fuchsia.todo",
+    "productName": "Fuchsia Todo List",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist",
+      "!node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/node_modules/.bin",
+      "!**/*.map"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    }
+  },
   "devDependencies": {
-    "electron": "^37.2.1"
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
   }
 }
