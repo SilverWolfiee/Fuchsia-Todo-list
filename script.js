@@ -366,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Next track
   if (skipBtn) {
     skipBtn.addEventListener('click', () => {
-      playTrack(currentTrackIndex-1);
+      playTrack(currentTrackIndex+1);
     });
   }
 
