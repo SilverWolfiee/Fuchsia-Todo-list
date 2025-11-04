@@ -8,16 +8,29 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Date box 
-  const dateBox = document.getElementById('date-box');
-  const now = new Date();
-  const weekday = now.toLocaleDateString('en-US', { weekday: 'short' });
-  const date = now.getDate();
-  const month = now.toLocaleDateString('en-US', { month: 'short' });
-  const year = now.getFullYear();
-  const formattedDate = `${weekday}, ${date} ${month} ${year}`;
-  if (dateBox) {
-    dateBox.textContent = formattedDate;
+  const dateBox = document.getElementById('date-box')
+  function updateDate(){
+    const dateBox = document.getElementById('date-box');
+    const now = new Date();
+    const weekday = now.toLocaleDateString('en-US', { weekday: 'short' });
+    const date = now.getDate();
+    const month = now.toLocaleDateString('en-US', { month: 'short' });
+    const year = now.getFullYear();
+    const formattedDate = `${weekday}, ${date} ${month} ${year}`;
+    if (dateBox) {
+      dateBox.textContent = formattedDate;
+    }
+    return date
   }
+  let currentDay = updateDate()
+  setInterval(()=>{
+
+    const now = new Date();
+    if(now.getDate()!==currentDay){
+      currentDay = updateDate()
+    }
+
+  }, 60*1000)
 
   // Clock 
   const clockBox = document.getElementById('clock');
