@@ -22,6 +22,13 @@
 
     <div id="fuchsia-swimsuit"></div> 
 </div>
-   <script></script>
+   <script>
+    const closeBtn = document.getElementById('close-btn');
+
+  // When clicked, use the bridge we made in preload.js!
+    closeBtn.addEventListener('click', () => {
+      window.electronAPI.closeApp();
+    });
+   </script>
 </body>
 </html>

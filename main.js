@@ -33,7 +33,7 @@ function createWindow() {
     }
   });
 
-  win.loadFile('index.html');
+  win.loadFile('login.html');
 
   ipcMain.on('close-app', () => win.close());
   win.on('blur', () => win.setAlwaysOnTop(false));
